@@ -94,3 +94,28 @@ cat ~/.ssh/id_ed25519.pub | pbcopy
 下記のURLにアクセスした後、"New SSH Key" ボタンを押下して、公開鍵を設定します.
 
 https://github.com/settings/keys
+
+生成した秘密鍵を keychain に登録します.
+
+```sh
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
+
+## SSH鍵のconfig設定
+
+config ファイルを作成します.
+```sh
+touch ~/.ssh/config
+```
+
+config ファイルに設定を書き込みます.
+```sh
+vim ~/.ssh/config
+```
+
+```
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+```
