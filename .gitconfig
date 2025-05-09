@@ -2,6 +2,8 @@
 	ui = auto
 [fetch]
 	prune = true
+[gui]
+	encoding = utf-8
 [pull]
 	ff = only
 [rebase]
