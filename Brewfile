@@ -1,0 +1,12 @@
+brew "git"
+brew "curl"
+brew "tree"
+brew "jq"
+
+cask "google-chrome"
+cask "google-japanese-ime"
+cask "visual-studio-code"
+cask "iterm2"
+cask "docker"
+cask "slack"
+cask "zoom"
